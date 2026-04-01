@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Docker Tutorial</title>
+</head>
+<body>
+  <h1 id="msg">Loading...</h1>
+  <script>
+    fetch("http://localhost:8000")
+      .then(r => r.json())
+      .then(data => document.getElementById("msg").textContent = data.message);
+  </script>
+</body>
+</html>
